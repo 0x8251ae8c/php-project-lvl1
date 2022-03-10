@@ -17,7 +17,10 @@
         "bin/brain-even"
     ],
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/games/even.php"
+        ]
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6"
