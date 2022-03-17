@@ -23,10 +23,12 @@ function run(array $gameData)
         line($questions[$i]);
         $userAnswer = prompt('Your answer');
 
-        if ($userAnswer !== $answers[$i]) {
+        if ($userAnswer !== (string)$answers[$i]) {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answers[$i]}'.");
+            line("Let's try again, {$name}!");
             return;
         }
+        line('Correct!');
     }
-    line('Correct!');
+    line("Congratulations, {$name}!");
 }
