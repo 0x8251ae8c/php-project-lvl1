@@ -4,6 +4,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function Php\Project\Lvl1\Games\Even\run;
+use Php\Project\Lvl1\Games\Even;
 
-run();
+Even\Play();

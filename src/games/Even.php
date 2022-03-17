@@ -2,39 +2,22 @@
 
 namespace Php\Project\Lvl1\Games\Even;
 
-use function cli\line;
-use function cli\prompt;
+use Php\Project\Lvl1\Engine;
 
-function run()
+function play()
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, {$name}!");
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    for ($i = 0; $i < 3; $i++) {
-        if (playRound() !== 'win') {
-            line("Let's try again, {$name}!");
-            return;
-        }
+    for ($i = 0; $i < Engine\NUM_ROUNDS; $i++) {
+        $number = rand(1, 100);
+        $rightAnswer = $number % 2 === 0 ? "no" : "yes";
+        $questions[$i] = "Question: {$number}";
+        $answers[$i] = $number % 2 === 0 ? "no" : "yes";
     }
 
-    line("Congratulations, {$name}!");
-}
+    $gameData[0] = $rules;
+    $gameData[1] = $questions;
+    $gameData[2] = $answers;
 
-function playRound()
-{
-    $number = rand(1, 100);
-    $rightAnswer = $number % 2 === 0 ? "no" : "yes";
-
-    line("Question: {$number}");
-    $userAnswer = prompt('Your answer');
-
-    if ($userAnswer !== $rightAnswer) {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
-        return 'lose';
-    }
-
-    line('Correct!');
-    return 'win';
+    Engine\run($gameData);
 }
