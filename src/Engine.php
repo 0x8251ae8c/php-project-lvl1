@@ -2,8 +2,6 @@
 
 namespace Php\Project\Lvl1\Engine;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 use function cli\line;
 use function cli\prompt;
 
@@ -18,7 +16,7 @@ function run(array $gameData)
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, {$name}!");
-    
+
     line($rules);
 
     for ($i = 0; $i < NUM_ROUNDS; $i++) {
