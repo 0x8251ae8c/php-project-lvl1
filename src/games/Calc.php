@@ -15,7 +15,7 @@ function play()
         $number2 = rand(1, 10);
 
         $questions[$i] = "Question: {$number1} {$operator} {$number2}";
-        
+
         switch ($operator) {
             case '+':
                 $answers[$i] = $number1 + $number2;
