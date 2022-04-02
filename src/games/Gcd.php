@@ -21,6 +21,8 @@ function findGcd(int $a, int $b): int
 function play()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
+    $questions = [];
+    $answers = [];
 
     for ($i = 0; $i < Engine\NUM_ROUNDS; $i++) {
         $a = rand(1, 100);
@@ -29,9 +31,7 @@ function play()
         $answers[$i] = findGcd($a, $b);
     }
 
-    $gameData[0] = $rules;
-    $gameData[1] = $questions;
-    $gameData[2] = $answers;
+    $gameData = [$rules, $questions, $answers];
 
     Engine\run($gameData);
 }

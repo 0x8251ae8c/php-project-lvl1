@@ -21,6 +21,8 @@ function generateProgression()
 function play()
 {
     $rules = 'What number is missing in the progression?';
+    $questions = [];
+    $answers = [];
 
     for ($i = 0; $i < Engine\NUM_ROUNDS; $i++) {
         $progression = generateProgression();
@@ -31,9 +33,7 @@ function play()
         $questions[$i] = "Question: " . implode(" ", $progression);
     }
 
-    $gameData[0] = $rules;
-    $gameData[1] = $questions;
-    $gameData[2] = $answers;
+    $gameData = [$rules, $questions, $answers];
 
     Engine\run($gameData);
 }
