@@ -11,7 +11,7 @@ function play()
     for ($i = 0; $i < Engine\NUM_ROUNDS; $i++) {
         $number = rand(1, 100);
         $questions[$i] = "Question: {$number}";
-        $answers[$i] = $number % 2 === 0 ? "no" : "yes";
+        $answers[$i] = $number % 2 === 0 ? "yes" : "no";
     }
 
     $gameData[0] = $rules;
