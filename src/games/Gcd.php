@@ -6,7 +6,7 @@ use Php\Project\Lvl1\Engine;
 
 function findGcd(int $a, int $b): int
 {
-    $gcd = 0;
+    $gcd = 1;
     $min = $a < $b ? $a : $b;
 
     for ($i = 1; $i <= $min / 2; $i++) {
