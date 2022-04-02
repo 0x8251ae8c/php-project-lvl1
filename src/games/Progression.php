@@ -28,7 +28,7 @@ function play()
         $hiddenElementIndex = rand(0, $progressionSize);
         $answers[$i] = $progression[$hiddenElementIndex];
         $progression[$hiddenElementIndex] = "..";
-        $questions[$i] = implode(" ", $progression);
+        $questions[$i] = "Question: " . implode(" ", $progression);
     }
 
     $gameData[0] = $rules;
