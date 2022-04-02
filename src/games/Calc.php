@@ -7,6 +7,9 @@ use Php\Project\Lvl1\Engine;
 function play()
 {
     $rules = 'What is the result of the expression?';
+    $questions = [];
+    $answers = [];
+
     $operators = ['+', '-', '*'];
 
     for ($i = 0; $i < Engine\NUM_ROUNDS; $i++) {
@@ -29,9 +32,7 @@ function play()
         }
     }
 
-    $gameData[0] = $rules;
-    $gameData[1] = $questions;
-    $gameData[2] = $answers;
+    $gameData = [$rules, $questions, $answers];
 
     Engine\run($gameData);
 }
