@@ -29,3 +29,10 @@ make brain-even
 make brain-calc
 ```
 [![asciicast](https://asciinema.org/a/thFnFKmuNF9XL3SEH4sMhY5Kl.svg)](https://asciinema.org/a/thFnFKmuNF9XL3SEH4sMhY5Kl)
+
+## Игра "НОД"
+
+```shell
+make brain-gcd
+```
+[![asciicast](https://asciinema.org/a/M3rEujEggq8Gvth5H6WrBOmk0.svg)](https://asciinema.org/a/M3rEujEggq8Gvth5H6WrBOmk0)
