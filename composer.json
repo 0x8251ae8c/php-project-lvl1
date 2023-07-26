@@ -13,5 +13,8 @@
             "email": "99046156+0x8251ae8c@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+      ]
 }
