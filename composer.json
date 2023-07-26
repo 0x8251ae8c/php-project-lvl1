@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "Первый проект в рамках курса \\\"PHP-разработчик\\\": Игры разума.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "0x8251ae8c",
+            "email": "99046156+0x8251ae8c@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
