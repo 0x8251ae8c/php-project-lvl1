@@ -2,6 +2,7 @@
     "name": "hexlet/code",
     "description": "Первый проект в рамках курса \\\"PHP-разработчик\\\": Игры разума.",
     "type": "project",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
