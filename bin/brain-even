@@ -4,7 +4,7 @@
 
 require_once (__DIR__ . "/../vendor/autoload.php");
 
-use function Php\Project\Lvl1\BrainEven\play;
+use function Php\Project\Lvl1\Games\Even\play;
 
 play();
 
