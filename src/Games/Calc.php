@@ -16,7 +16,7 @@ function play(): void
         $operator = ['+', '-', '*'][random_int(0, 2)];
 
         $gameQuestions[] = "{$number1} {$operator} {$number2}";
-        $rightAnswers[] = (string) match($operator) {
+        $rightAnswers[] = (string) match ($operator) {
             '+' => $number1 + $number2,
             '-' => $number1 - $number2,
             '*' => $number1 * $number2
