@@ -27,7 +27,7 @@ function play(): void
     for ($i = 0; $i < Engine\NUM_OF_ROWS; $i += 1) {
         $progression = generateProgression();
         $progressionSize = count($progression);
-        $hiddenElementIndex = random_int(0, $progressionSize - 1);
+        $hiddenElementIndex = random_int(1, $progressionSize) - 1;
         $rightAnswers[] = (string)$progression[$hiddenElementIndex];
         $progression[$hiddenElementIndex] = "..";
         $gameQuestions[] = implode(' ', $progression);

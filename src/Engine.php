@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const NUM_OF_ROWS = 3;
 
-function run($goalOfTheGame, $questions, $answers): void
+function run(string $goalOfTheGame, array $questions, array $answers): void
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");

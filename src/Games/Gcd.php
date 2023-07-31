@@ -4,7 +4,7 @@ namespace Php\Project\Lvl1\Games\Gcd;
 
 use Php\Project\Lvl1\Engine;
 
-function findGcd($a, $b): int
+function findGcd(int $a, int $b): int
 {
     while ($a !== 0 & $b !== 0) {
         if ($a > $b) {
